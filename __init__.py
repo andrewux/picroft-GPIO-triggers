@@ -54,7 +54,7 @@ class PicroftLED(MycroftSkill):
         led.off()
     
     def handler_utterance(self, message):
-        led.blink(frequency=5)
+        led.blink()
     
     def handler_audio_output_start(self, message):
         # start fading led
