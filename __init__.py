@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from mycroft import MycroftSkill
 from mycroft.messagebus.message import Message
 
-from gpiozero import LED
+from gpiozero import PWDLED
 
 led = PWMLED(12)
 
