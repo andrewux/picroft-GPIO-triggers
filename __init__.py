@@ -38,8 +38,8 @@ class PicroftLED(MycroftSkill):
                            self.handle_listener_started)
             self.add_event('recognizer_loop:record_end',
                            self.handle_listener_ended)
-            self.add_event('recognizer_loop:utterance',
-                           self.handle_utterance)
+            self.add_event('recognizer_loop:audio_output_end',
+                           self.handler_audio_output_end)
     
     def handle_listener_started(self, message):
         # code to excecute when active listening begins...
@@ -50,7 +50,7 @@ class PicroftLED(MycroftSkill):
         # start fading led
         led.pulse()
 
-    def handle_utterance(self, message):
+    def handler_audio_output_end(self, message):
         # stop fading led
         led.off()
             
