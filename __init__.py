@@ -44,7 +44,15 @@ class PicroftLED(MycroftSkill):
                            self.handler_audio_output_start)
             self.add_event('recognizer_loop:audio_output_end',
                            self.handler_audio_output_end)
-    
+            self.add_event('recognizer_loop:wakeword',
+                          self.handler_wakeword)
+            self.add_event('mycroft.stop',
+                           self.handler_mycroft_stop)
+
+    def handler_mycroft_stop(self, message):
+        # code to excecute when mycroft.stop message detected...
+        led.off()
+            
     def handle_listener_started(self, message):
         # code to excecute when active listening begins...
         # light up led
@@ -63,6 +71,9 @@ class PicroftLED(MycroftSkill):
     def handler_audio_output_end(self, message):
         # stop fading led
         led.off()
-            
+    def handler_wakeword(self, message):
+        # code to excecute when recognizer_loop:wakeword message
+        led.pulse(fade_in_time=0.5, fade_out_time=0.5, n=1)
+        
 def create_skill():
     return PicroftLED()
