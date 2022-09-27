@@ -1,4 +1,6 @@
-# Picroft LED trigger
+# CURRENTY UNTESTED
+
+# Picroft GPIO trigger
 
 * Pull 3 separate GPIO pins high (3.3v) when listening, "thinking", and when thinking is over and output starts
 
