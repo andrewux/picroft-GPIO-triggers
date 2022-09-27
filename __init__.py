@@ -1,7 +1,6 @@
 """
-skill picroft-led
-Copyright (C) 2021 Andreas Rother
-Modified for multiple outputs by Andrew Martin 2022
+skill picroft-caselights
+Copyright (C) 2022 Andrew Martin
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
