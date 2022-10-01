@@ -1,5 +1,5 @@
 """
-skill picroft-caselights
+skill picroft-gpio-triggers
 Copyright (C) 2022 Andrew Martin
 
 This program is free software: you can redistribute it and/or modify
@@ -25,7 +25,7 @@ outA = DigitalOutputDevice(13)
 outB = DigitalOutputDevice(19)
 outC = DigitalOutputDevice(26)
 
-class PicroftLED(MycroftSkill):
+class picroftgpiotriggers(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
     
@@ -80,4 +80,4 @@ class PicroftLED(MycroftSkill):
        # ledA.pulse(fade_in_time=0.5, fade_out_time=0.5, n=1)
         
 def create_skill():
-    return PicroftCASELIGHTS()
+    return picroft-gpio-triggers()
